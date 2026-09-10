@@ -1,0 +1,12 @@
+<div class="form-group mb-3">
+    @if(label){
+        <label class="form-label" [for]="id">{{ label }}</label>
+    }
+    <input
+        #input
+        class="form-control"
+        [id]="id"
+        [type]="type"
+        [placeholder]="placeholder"
+        (input)="onChange(input.value)" >
+</div>

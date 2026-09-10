@@ -68,3 +68,26 @@ export interface NavbarIconConfig {
     /** Tamaño del icono en unidades `rem` */
     size: number;
 }
+
+/**
+ * Representa una tarjeta dentro de una lista de tarjetas.
+ */
+export interface CardListData {
+  /** Identificador único de la tarjeta */
+  key: string;
+
+  /** Título de la tarjeta */
+  title: string;
+
+  /** Texto descriptivo de la tarjeta */
+  text: string;
+
+  /** Texto opcional del badge */
+  badge?: string;
+
+  /** Tipo visual opcional del badge */
+  badgeType?: BadgeType;
+
+  /** Texto visible del botón de acción */
+  buttonText: string;
+}

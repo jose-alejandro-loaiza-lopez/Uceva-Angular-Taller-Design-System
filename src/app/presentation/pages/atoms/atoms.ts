@@ -6,8 +6,10 @@ import {
   BadgeTypeText,
   ButtonAtom,
   ButtonType,
+  CardAtom,
   ContainerAtom,
   IconAtom,
+  InputAtom,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -15,8 +17,10 @@ import {
   imports: [
     BadgeAtom,
     ButtonAtom,
-    IconAtom,
+    CardAtom,
     ContainerAtom,
+    IconAtom,
+    InputAtom,
     CommonModule,
   ],
 })
@@ -51,8 +55,22 @@ export class Atoms {
     { name: 'ban', size: 5 },
   ]
 
+  cards: { title: string, text: string}[] = [
+    { title: 'Card 1', text: 'Este es un ejemplo de tarjeta atómica.' },
+  ];
+
+  inputs: { id: string, label: string, placeholder: string, type: string }[] = [
+    { id: 'inputName', label: 'Nombre', placeholder: 'Ingrese su nombre', type: 'text' },
+    { id: 'inputEmail', label: 'Correo', placeholder: 'correo@ejemplo.com', type: 'email' },
+    { id: 'inputPassword', label: 'Contraseña', placeholder: 'Ingrese su contraseña', type: 'password' },
+  ];
+
   onClick(idButton: string){
     alert(`Click en el Boton ${idButton}`);
+  }
+
+  onInputChange(value: string){
+    console.log('Valor del input:', value);
   }
 
 }

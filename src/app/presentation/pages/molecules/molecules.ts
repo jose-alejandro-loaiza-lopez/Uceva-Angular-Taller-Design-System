@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 import { 
   ButtonGroupData, 
   ButtonGroupMolecule, 
+  CardListData,
+  CardListMolecule,
   ContainerAtom, 
   NavLink, 
-  NavLinkMolecule 
+  NavLinkMolecule,
+  SearchFormMolecule,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -13,6 +16,8 @@ import {
     ContainerAtom,
     ButtonGroupMolecule,
     NavLinkMolecule,
+    SearchFormMolecule,
+    CardListMolecule,
   ],
 })
 export class Molecules {
@@ -35,5 +40,19 @@ export class Molecules {
 
   onClick(idButton: string){
     alert(`Click en el Boton de Grupo ${idButton}`);
+  }
+
+  cards: CardListData[] = [
+    { key: 'card-1', title: 'Tarjeta Uno', text: 'Descripción de la primera tarjeta', badge: 'Nuevo', buttonText: 'Ver' },
+    { key: 'card-2', title: 'Tarjeta Dos', text: 'Descripción de la segunda tarjeta', buttonText: 'Ver' },
+    { key: 'card-3', title: 'Tarjeta Tres', text: 'Descripción de la tercera tarjeta', badge: 'Pro', badgeType: 'dark', buttonText: 'Comprar' },
+  ];
+
+  onSelectCard(key: string){
+    alert(`Tarjeta seleccionada ${key}`);
+  }
+
+  onSubmitSearch(term: string){
+    alert(`Buscando: ${term}`);
   }
 }

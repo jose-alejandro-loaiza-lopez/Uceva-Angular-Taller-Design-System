@@ -9,3 +9,17 @@
     <dsb-nav-link-molecule [navLinks]="navLinks">
     </dsb-nav-link-molecule>
 </dsb-container-atom>
+
+<dsb-container-atom title="Search Form" >
+    <dsb-search-form-molecule
+        placeholder="Buscar componentes..."
+        (submitSearch)="onSubmitSearch($event)">
+    </dsb-search-form-molecule>
+</dsb-container-atom>
+
+<dsb-container-atom title="Card List" >
+    <dsb-card-list-molecule
+        [cards]="cards"
+        (selectedCard)="onSelectCard($event)">
+    </dsb-card-list-molecule>
+</dsb-container-atom>

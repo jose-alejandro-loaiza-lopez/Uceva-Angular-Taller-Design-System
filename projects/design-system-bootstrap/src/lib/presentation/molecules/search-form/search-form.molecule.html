@@ -1,0 +1,13 @@
+<div class="d-flex align-items-start gap-2">
+    <dsb-input-atom
+        [id]="'search-input'"
+        [placeholder]="placeholder"
+        (changeValue)="onInputChange($event)">
+    </dsb-input-atom>
+    <dsb-button-atom
+        [idButton]="'search-button'"
+        [text]="buttonText"
+        [type]="buttonType"
+        (clicker)="onSubmit()">
+    </dsb-button-atom>
+</div>

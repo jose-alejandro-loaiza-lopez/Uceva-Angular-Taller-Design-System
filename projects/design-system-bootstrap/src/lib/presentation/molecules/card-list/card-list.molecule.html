@@ -1,0 +1,16 @@
+<div class="d-flex flex-wrap gap-3">
+    @for(card of cards; track card){
+        <dsb-card-atom [title]="card.title" [text]="card.text">
+            @if(card.badge){
+                <dsb-badge-atom [text]="card.badge" [type]="card.badgeType ?? 'primary'"></dsb-badge-atom>
+            }
+            <div class="mt-2">
+                <dsb-button-atom
+                    [idButton]="card.key"
+                    [text]="card.buttonText"
+                    (clicker)="onSelectCard($event)">
+                </dsb-button-atom>
+            </div>
+        </dsb-card-atom>
+    }
+</div>

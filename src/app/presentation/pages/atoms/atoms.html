@@ -26,3 +26,24 @@
         }
     </section>
 </dsb-container-atom>
+
+<dsb-container-atom title="Card" >
+    <section class="d-flex gap-4" >
+        @for(card of cards; track card){
+            <dsb-card-atom [title]="card.title" [text]="card.text"></dsb-card-atom>
+        }
+    </section>
+</dsb-container-atom>
+
+<dsb-container-atom title="Input" >
+    <section class="d-flex flex-column gap-2">
+        @for(input of inputs; track input){
+            <dsb-input-atom
+                [id]="input.id"
+                [label]="input.label"
+                [placeholder]="input.placeholder"
+                (changeValue)="onInputChange($event)">
+            </dsb-input-atom>
+        }
+    </section>
+</dsb-container-atom>

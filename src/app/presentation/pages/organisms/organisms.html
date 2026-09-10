@@ -1,3 +1,11 @@
 <dsb-container-atom title="Navbar" >
     <dsb-navbar-organism [navbarConfig]="navbarConfig"></dsb-navbar-organism>
 </dsb-container-atom>
+
+<dsb-container-atom title="Catalog" >
+    <dsb-catalog-organism
+        [cards]="catalogCards"
+        placeholder="Buscar tarjetas..."
+        (selectedCard)="onSelectCatalogCard($event)">
+    </dsb-catalog-organism>
+</dsb-container-atom>

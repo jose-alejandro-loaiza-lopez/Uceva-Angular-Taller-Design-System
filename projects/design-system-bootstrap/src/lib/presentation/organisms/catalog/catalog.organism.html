@@ -1,0 +1,10 @@
+<section class="catalog-organism">
+    <dsb-search-form-molecule
+        [placeholder]="placeholder"
+        (submitSearch)="onSearch($event)">
+    </dsb-search-form-molecule>
+    <dsb-card-list-molecule
+        [cards]="filteredCards"
+        (selectedCard)="onSelectCard($event)">
+    </dsb-card-list-molecule>
+</section>
