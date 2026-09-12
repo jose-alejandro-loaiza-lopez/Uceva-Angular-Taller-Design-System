@@ -8,6 +8,9 @@ import {
   NavLink, 
   NavLinkMolecule,
   SearchFormMolecule,
+  TableBodyMolecule,
+  TableHeadMolecule,
+  TableRow,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -18,6 +21,8 @@ import {
     NavLinkMolecule,
     SearchFormMolecule,
     CardListMolecule,
+    TableHeadMolecule,
+    TableBodyMolecule,
   ],
 })
 export class Molecules {
@@ -54,5 +59,16 @@ export class Molecules {
 
   onSubmitSearch(term: string){
     alert(`Buscando: ${term}`);
+  }
+
+  tableHeaders: string[] = ['Nombre', 'Edad', 'Ciudad'];
+
+  tableRows: TableRow[] = [
+    [{ content: 'Juan Perez' }, { content: '25' }, { content: 'Cali' }],
+    [{ content: 'Ana Gomez' }, { content: '30' }, { content: 'Bogota' }],
+  ];
+
+  onSelectTableRow(index: number){
+    alert(`Fila de la tabla seleccionada: ${index}`);
   }
 }

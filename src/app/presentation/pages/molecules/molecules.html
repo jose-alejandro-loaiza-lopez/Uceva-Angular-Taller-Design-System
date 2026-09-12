@@ -23,3 +23,15 @@
         (selectedCard)="onSelectCard($event)">
     </dsb-card-list-molecule>
 </dsb-container-atom>
+
+<dsb-container-atom title="Table Molecules" >
+    <section class="table-responsive">
+        <table class="table table-striped">
+            <thead dsb-table-head-molecule [columns]="tableHeaders"></thead>
+            <tbody dsb-table-body-molecule
+                [rows]="tableRows"
+                (selectedRow)="onSelectTableRow($event)">
+            </tbody>
+        </table>
+    </section>
+</dsb-container-atom>

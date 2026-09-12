@@ -1,0 +1,7 @@
+@for(cell of cells; track cell) {
+    @if (type === 'header') {
+        <th scope="col" dsb-header-cell-atom [content]="cell.content" [class]="cell.class"></th>
+    } @else {
+        <td dsb-cell-atom [content]="cell.content" [class]="cell.class"></td>
+    }
+}

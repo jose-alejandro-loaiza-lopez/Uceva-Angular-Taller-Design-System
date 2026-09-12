@@ -1,0 +1,3 @@
+@for(row of rows; track row; let index = $index) {
+    <tr dsb-table-row-molecule [cells]="row" (selectedRow)="onSelectRow(index)"></tr>
+}

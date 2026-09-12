@@ -20,6 +20,9 @@ export { NavLinkMolecule } from './lib/presentation/molecules/nav-link/nav-link.
 export { ButtonGroupMolecule } from './lib/presentation/molecules/button-group/button-group.molecule';
 export { SearchFormMolecule } from './lib/presentation/molecules/search-form/search-form.molecule';
 export { CardListMolecule } from './lib/presentation/molecules/card-list/card-list.molecule';
+export { TableRowMolecule } from './lib/presentation/molecules/table-row/table-row.molecule';
+export { TableHeadMolecule } from './lib/presentation/molecules/table-head/table-head.molecule';
+export { TableBodyMolecule } from './lib/presentation/molecules/table-body/table-body.molecule';
 
 //Organisms
 export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
