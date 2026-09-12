@@ -27,3 +27,4 @@ export { TableBodyMolecule } from './lib/presentation/molecules/table-body/table
 //Organisms
 export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
 export { CatalogOrganism } from './lib/presentation/organisms/catalog/catalog.organism';
+export { TableOrganism } from './lib/presentation/organisms/table/table.organism';

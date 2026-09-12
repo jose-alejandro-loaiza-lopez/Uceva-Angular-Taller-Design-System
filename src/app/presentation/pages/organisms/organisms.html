@@ -9,3 +9,14 @@
         (selectedCard)="onSelectCatalogCard($event)">
     </dsb-catalog-organism>
 </dsb-container-atom>
+
+<dsb-container-atom title="Table Organism" >
+    <section class="table-responsive">
+        <table dsb-table-organism
+            [headers]="tableHeaders"
+            [rows]="tableRows"
+            [striped]="true"
+            (selectedRow)="onSelectTableRow($event)">
+        </table>
+    </section>
+</dsb-container-atom>

@@ -5,12 +5,14 @@ import {
   ContainerAtom,
   NavbarConfig,
   NavbarOrganism,
+  TableOrganism,
+  TableRow,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
   selector: 'app-organisms',
   templateUrl: './organisms.html',
-  imports: [NavbarOrganism, CatalogOrganism, ContainerAtom],
+  imports: [NavbarOrganism, CatalogOrganism, TableOrganism, ContainerAtom],
 })
 export class Organisms {
   navbarConfig: NavbarConfig = {
@@ -34,5 +36,17 @@ export class Organisms {
 
   onSelectCatalogCard(key: string){
     alert(`Tarjeta del catálogo seleccionada: ${key}`);
+  }
+
+  tableHeaders: string[] = ['Nombre', 'Edad', 'Ciudad'];
+
+  tableRows: TableRow[] = [
+    [{ content: 'Juan Perez' }, { content: '25' }, { content: 'Cali' }],
+    [{ content: 'Ana Gomez' }, { content: '30' }, { content: 'Bogota' }],
+    [{ content: 'Luis Mora' }, { content: '28' }, { content: 'Medellin' }],
+  ];
+
+  onSelectTableRow(index: number){
+    alert(`Fila de la tabla seleccionada: ${index}`);
   }
 }

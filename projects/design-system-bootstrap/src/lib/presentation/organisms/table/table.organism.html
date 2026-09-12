@@ -1,0 +1,4 @@
+@if (headers.length > 0) {
+    <thead dsb-table-head-molecule [columns]="headers"></thead>
+}
+<tbody dsb-table-body-molecule [rows]="rows" (selectedRow)="onSelectRow($event)"></tbody>
