@@ -1,13 +1,18 @@
-const baseConfig = requier('../../jest.config.js');
+const baseConfig = require('../../jest.config.js');
 
 module.exports = {
     ...baseConfig,
     globals: {
         'ts-jest': {
-            tsconfig: '../../projects/design-system-bootstrap/tsconfig.spec.json'
+            tsconfig: '<rootDir>/tsconfig.spec.json'
         }
     },
     displayName: 'design-system-bootstrap',
     name: 'design-system-bootstrap',
-    rootDir: 'design-system-bootstrap',
+    rootDir: '.',
+    setupFilesAfterEnv: ['<rootDir>/../../setup-jest.ts'],
+    testPathIgnorePatterns: [
+        '<rootDir>/../../node_modules/',
+        '<rootDir>/../../dist/',
+    ],
 }
