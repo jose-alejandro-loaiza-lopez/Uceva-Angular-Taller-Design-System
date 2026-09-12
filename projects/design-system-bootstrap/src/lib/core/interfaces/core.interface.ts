@@ -91,3 +91,24 @@ export interface CardListData {
   /** Texto visible del botón de acción */
   buttonText: string;
 }
+
+/**
+ * Representa una celda de una tabla.
+ */
+export interface TableCell {
+  /** Contenido visible de la celda */
+  content: string;
+
+  /** Clases CSS adicionales opcionales aplicadas a la celda */
+  class?: string;
+}
+
+/**
+ * Representa una fila de una tabla compuesta por celdas.
+ */
+export type TableRow = TableCell[];
+
+/**
+ * Tipo de fila dentro de una tabla: encabezado o cuerpo.
+ */
+export type TableRowType = 'header' | 'body';

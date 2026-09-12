@@ -12,6 +12,8 @@ export { ButtonAtom } from './lib/presentation/atoms/button/button.atom';
 export { ContainerAtom } from './lib/presentation/atoms/container/container-atom';
 export { CardAtom } from './lib/presentation/atoms/card/card.atom';
 export { InputAtom } from './lib/presentation/atoms/input/input.atom';
+export { CellAtom } from './lib/presentation/atoms/cell/cell.atom';
+export { HeaderCellAtom } from './lib/presentation/atoms/header-cell/header-cell.atom';
 
 //Molecules
 export { NavLinkMolecule } from './lib/presentation/molecules/nav-link/nav-link.molecule';
