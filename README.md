@@ -107,8 +107,22 @@ src/app/atoms/button/
 └──button.atom.ts
 ```
 
-### 🎓 Observaciones Importantes
+### 🚀 Despliegue en GitHub Pages
 
-- En este taller se utilizan componentes standalone
-- Mantener una estructura clara favorece la escalabilidad y mantenibilidad
-- Revisar cobertura de pruebas unitarias y documentación
+El proyecto incluye un workflow de GitHub Actions (`.github/workflows/deploy-github-pages.yml`) que construye la librería del Design System, la aplicación de demostración y la publica en GitHub Pages.
+
+Pasos para habilitarlo:
+
+1. Sube los cambios a la rama `main`.
+2. En GitHub, ve a **Settings → Pages**.
+3. En **Source**, selecciona **GitHub Actions**.
+4. El workflow se ejecutará automáticamente en cada push a `main` (o manualmente desde **Actions → Run workflow**).
+
+La aplicación quedará disponible en:
+
+`https://<tu-usuario>.github.io/Uceva-Angular-Taller-Design-System/`
+
+Notas:
+- La librería se construye antes que la app porque la app la consume desde `dist/design-system-bootstrap`.
+- El `base-href` se configura automáticamente con el nombre del repositorio.
+- Se copia `index.html` a `404.html` para soportar el enrutamiento SPA en GitHub Pages.

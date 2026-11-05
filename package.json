@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build design-system-bootstrap",
-    "build:dev": "ng build design-system-bootstrap --watch",
+    "build": "npm run build:lib && npm run build:app",
+    "build:lib": "ng build design-system-bootstrap",
+    "build:lib:dev": "ng build design-system-bootstrap --watch",
+    "build:app": "ng build",
+    "build:dev": "npm run build:lib:dev",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
